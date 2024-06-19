@@ -1,0 +1,41 @@
+﻿@page
+@model ShayanShop.Pages.Admin.ManageUsers.DetailsModel
+@{
+    ViewData["Title"] = "جزئیات";
+}
+
+<h1>جزئیات کاربر</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.Password)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.RegisterDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.RegisterDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.IsAdmin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.IsAdmin)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Users.UserId">ویرایش کاربر</a> |
+    <a asp-page="./Index">بازگشت</a>
+</div>

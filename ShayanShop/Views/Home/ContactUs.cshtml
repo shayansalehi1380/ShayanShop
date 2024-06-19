@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "تماس با ما";
+}
+<h1>@ViewData["Title"]</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارتباط با ما:</title>
+    <style>
+    form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    }
+
+    label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+    button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    }
+
+    button:hover {
+    background-color: #0056b3;
+    }
+    </style>
+</head>
+
+<hr/>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card bg-light mb-3" style="max-width: 30rem;">
+            <div class="card-header">          
+                <h5>راه های ارتباطی</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">شماره تماس: 09015538133</p>
+                <p class="card-text">آدرس: تهران</p>
+                <p class="card-text">info@ShayanShop.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<body>
+    <div>
+        <h4>انتقادات و پیشنهادات:</h4> 
+        <div>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">نام:</label> <input type="text" id="name" name="name" required>
+                </div> <div>
+                    <label for="email">ایمیل:</label> <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="پیام">پیام:</label> <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" asp-action="ContactSend">ارسال</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

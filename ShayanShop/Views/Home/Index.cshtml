@@ -1,0 +1,24 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "فروشگاه";
+}
+
+<div class="text-center">
+    <h1 class="display-4">به فروشگاه شایان شاپ خوش آمدید</h1>
+    <hr />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="card">
+                    <img src="/image/@(item.Id).jpg" height="160" width="160" class="card-img-top img-thumbnail" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <a asp-action="Detail" asp-controller="Home" asp-route-id="@item.Id">جزئیات محصول</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
