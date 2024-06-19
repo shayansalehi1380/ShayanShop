@@ -4,7 +4,7 @@ This is my The second project made with MVC pattern, I think the code is underst
 
 **Technologies used in this project :**
 
-C#
+_C#_
 
 _Asp.Net Core 5_
 
